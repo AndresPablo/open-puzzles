@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://dyhkm17jon85o"]
+
+[ext_resource type="Script" uid="uid://bd1q17jl53ek7" path="res://Core Engine/Scene Manager/TransitionManager.gd" id="1_6u1gx"]
+
+[sub_resource type="Animation" id="Animation_6u1gx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rect1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -689)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rect2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 688)]
+}
+
+[sub_resource type="Animation" id="Animation_wkjmm"]
+resource_name = "Vertical"
+length = 2.0
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rect1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 1.75, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -689), Vector2(0, -250), Vector2(0, -250), Vector2(0, -689)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rect2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 1.75, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 688), Vector2(0, 250), Vector2(0, 250), Vector2(0, 688)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tafqt"]
+_data = {
+&"RESET": SubResource("Animation_6u1gx"),
+&"Vertical": SubResource("Animation_wkjmm")
+}
+
+[node name="TransitionManager" type="Node" unique_id=1846575663]
+script = ExtResource("1_6u1gx")
+
+[node name="Rect1" type="ColorRect" parent="." unique_id=1788031640]
+offset_top = -689.0
+offset_right = 1162.0
+offset_bottom = -34.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Rect2" type="ColorRect" parent="." unique_id=1202279319]
+offset_top = 688.0
+offset_right = 1159.0
+offset_bottom = 1352.9988
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Animator" type="AnimationPlayer" parent="." unique_id=979856263]
+libraries/ = SubResource("AnimationLibrary_tafqt")
