@@ -3,8 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cfrf8pht147rf" path="res://icon.svg" id="1_e82x7"]
 [ext_resource type="Script" uid="uid://ca7w72p7ivjex" path="res://Menu/Splash/Godot/LogoGodot.gd" id="1_gwi23"]
 
-[sub_resource type="Animation" id="Animation_n5k00"]
-resource_name = "Animation"
+[sub_resource type="Animation" id="Animation_e82x7"]
 length = 3.0000000000000004
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -19,7 +18,8 @@ tracks/0/keys = {
 "values": [Vector2(0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_e82x7"]
+[sub_resource type="Animation" id="Animation_n5k00"]
+resource_name = "Transition"
 length = 3.0000000000000004
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -36,8 +36,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gwi23"]
 _data = {
-&"Animation": SubResource("Animation_n5k00"),
-&"RESET": SubResource("Animation_e82x7")
+&"RESET": SubResource("Animation_e82x7"),
+&"Transition": SubResource("Animation_n5k00")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_caesh"]

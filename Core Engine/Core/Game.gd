@@ -29,7 +29,7 @@ func _ready() -> void:
 	UI = App.get_child(1)
 	Transition = App.get_child(3)
 	
-	SceneManager.change_scene("LogoSplash")
+	SceneManager.load_initial_scene("LogoSplash")
 	
 
 func _process(delta: float) -> void:

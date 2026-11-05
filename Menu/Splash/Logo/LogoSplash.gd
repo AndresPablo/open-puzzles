@@ -4,7 +4,8 @@ extends Node
 
 func _ready() -> void:
 	Animator.animation_finished.connect(_on_animation_finished)
-	Animator.play("Animation")
+	Animator.play("Transition")
 
-func _on_animation_finished(anim: String) -> void:
-	SceneManager.change_scene("LogoGodot")
+func _on_animation_finished(_name: String) -> void:
+	SceneManager.change_scene("GodotSplash", "Vertical")
+	print("finished")

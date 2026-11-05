@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dpsxpqpwf55h8" path="res://Core Engine/UI/UIRoot.tscn" id="3_36nod"]
 [ext_resource type="Script" uid="uid://cepcwgbn31xhg" path="res://Core Engine/Scene Manager/SceneManager.gd" id="3_unx1i"]
 [ext_resource type="PackedScene" uid="uid://o8f1de4nb5bu" path="res://Core Engine/Audio/AudioRoot.tscn" id="4_36nod"]
+[ext_resource type="PackedScene" uid="uid://dyhkm17jon85o" path="res://Core Engine/Scene Manager/TransitionManager.tscn" id="6_bbsgg"]
 
 [node name="App" type="Node" unique_id=517584592]
 script = ExtResource("1_vpdh3")
@@ -15,3 +16,5 @@ script = ExtResource("3_unx1i")
 [node name="UiRoot" parent="." unique_id=1512859480 instance=ExtResource("3_36nod")]
 
 [node name="AudioRoot" parent="." unique_id=587072958 instance=ExtResource("4_36nod")]
+
+[node name="TransitionManager" parent="." unique_id=1846575663 instance=ExtResource("6_bbsgg")]
